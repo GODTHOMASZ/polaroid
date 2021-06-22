@@ -1,0 +1,31 @@
+{
+  "name": "react_file_upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "polaroid": "npm start --prefix polaroid",
+    "dev": "concurrently \"npm run server\" \"npm run polaroid\"",
+    "build": "react-scripts build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-fileupload": "^1.2.1",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "nanoid": "^3.1.23",
+    "react-native-fs": "^2.18.0",
+    "react-scripts": "^4.0.3",
+    "react-timestamp": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11"
+  }
+}
